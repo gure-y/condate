@@ -2,6 +2,7 @@
   <div class="inner">
     <h1 class="page-heading">condate!マイページ</h1>
     <%= current_user.name %>
+    <%= link_to "プロフィールを編集", edit_user_path(current_user) %>
     <div class="card__wrapper">
       <div class="card">
         <img src="./images/image.png" alt="" class="card__img" />
