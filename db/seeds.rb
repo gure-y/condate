@@ -1,7 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Refrigerator.create(cooking: 'チキンカレー', main:'お米', meat:'鶏肉', fish:'ない', tofu:'ない', begetable:'玉ねぎ', egg: 'ない')
+Refrigerator.create(cooking: 'ビーフカレー', main:'お米', meat:'牛肉', fish:'ない', tofu:'ない', begetable:'玉ねぎ', egg: 'ない')
+Refrigerator.create(cooking: 'キーマカレー', main:'お米', meat:'ひき肉', fish:'ない', tofu:'ない', begetable:'玉ねぎ', egg: 'ない')
+Refrigerator.create(cooking: 'ラーメン', main:'ラーメン', meat:'ない', fish:'ない', tofu:'ない', begetable:'ない', egg: 'ない' )
+Refrigerator.create(cooking: '外食', main:'ない', meat:'ない', fish:'ない', tofu:'ない', begetable:'ない', egg: 'ない')
+Refrigerator.create(cooking: '出前', main:'ない', meat:'ない', fish:'ない', tofu:'ない', begetable:'ない', egg: 'ない')
