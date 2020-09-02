@@ -1,6 +1,11 @@
 <main class="main">
   <div class="inner">
     <h1 class="page-heading">condate!</h1>
+    <% if user_signed_in? %>
+      <%= link_to "マイページ", user_path(current_user) %> 
+    <% else %>
+      <%= link_to "新規登録", new_user_registration_path %>
+    <% end %>
     <div class="search">
     冷蔵庫の中身が入る
     </div>
