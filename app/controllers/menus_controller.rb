@@ -21,6 +21,10 @@ def create
   end
 end
 
+def show
+  @menu = Menu.find(params[:id])
+end
+
 private
 def menu_params
   params.require(:menu).permit(:title, :image, :url, :recipe).merge(user_id: current_user.id)
