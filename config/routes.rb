@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "menus#top"
-  resources :items do
+  resources :menus do
     collection do
       get 'top'
     end
