@@ -39,6 +39,15 @@ def update
   end
 end
 
+def destroy
+  @menu = Menu.find(params[:id])
+  if @menu.destroy
+    redirect_to user_path(current_user)
+  else
+    render :show
+  end
+end
+
 private
 def menu_params
   params.require(:menu).permit(:title, :image, :url, :recipe).merge(user_id: current_user.id)
