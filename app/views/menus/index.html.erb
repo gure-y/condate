@@ -6,15 +6,17 @@
 
     <div class="card__wrapper">
       <% @menus.each do |menu| %>
-        <div class="card">
-          <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
-          <div class="card__body">
-            <h2 class="card__title"><%= menu.title %></h2>
-            <p class="card__summary">
-              <%= menu.url %>
-            </p>
+        <%= link_to menu_path(menu) do %>
+          <div class="card">
+            <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
+            <% end %>
+            <div class="card__body">
+              <h2 class="card__title"><%= menu.title %></h2>
+              <p class="card__summary">
+                <%= menu.url %>
+              </p>
+            </div>
           </div>
-        </div>
       <% end %>
     </div>
   </div>
