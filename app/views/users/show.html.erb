@@ -5,7 +5,7 @@
     <%= link_to "プロフィールを編集", edit_user_path(current_user) %>
     <%= link_to "投稿する？", new_menu_path %>
     <div class="card__wrapper">
-      <% @menu.each do |menu| %>
+      <% @menu.reverse_each do |menu| %>
         <%= link_to menu_path(menu) do %>
           <div class="card">
             <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
