@@ -3,34 +3,23 @@
     <h1 class="page-heading">condate!マイページ</h1>
     <%= current_user.name %>
     <%= link_to "プロフィールを編集", edit_user_path(current_user) %>
+    <%= link_to "投稿する？", new_menu_path %>
+
     <div class="card__wrapper">
-      <div class="card">
-        <img src="./images/image.png" alt="" class="card__img" />
-        <div class="card__body">
-          <h2 class="card__title">メニュー名</h2>
-          <p class="card__summary">
-            詳細
-          </p>
+      <% @menu.each do |menu| %>
+        <div class="card">
+          <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
+          
+          <div class="card__body">
+            <h2 class="card__title"><%= menu.title %></h2>
+            <p class="card__summary">
+              <%= menu.url %>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./images/image.png" alt="" class="card__img" />
-        <div class="card__body">
-          <h2 class="card__title">メニュー名</h2>
-          <p class="card__summary">
-            詳細
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/image.png" alt="" class="card__img" />
-        <div class="card__body">
-          <h2 class="card__title">メニュー名</h2>
-          <p class="card__summary">
-            詳細
-          </p>
-        </div>
-      </div>
+      <% end %>
+
+
     </div>
   </div>
 </main>
