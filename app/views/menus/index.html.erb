@@ -1,15 +1,13 @@
 <main class="main">
   <div class="inner">
-    <h1 class="page-heading">condate!マイページ</h1>
-    <%= current_user.name %>
-    <%= link_to "プロフィールを編集", edit_user_path(current_user) %>
+    <h1 class="page-heading">condate!みんなのごはん</h1>
     <%= link_to "投稿する？", new_menu_path %>
+    <%= link_to "マイページ", user_path(current_user) %> 
 
     <div class="card__wrapper">
-      <% @menu.each do |menu| %>
+      <% @menus.each do |menu| %>
         <div class="card">
           <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
-          
           <div class="card__body">
             <h2 class="card__title"><%= menu.title %></h2>
             <p class="card__summary">
@@ -18,8 +16,6 @@
           </div>
         </div>
       <% end %>
-
-
     </div>
   </div>
 </main>

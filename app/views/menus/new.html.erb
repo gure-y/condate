@@ -1,0 +1,9 @@
+<h3>投稿</h3>
+
+<%= form_with model: @menu, local: true do |f| %>
+  <%= f.file_field :image %>
+  <%= f.text_area :title, placeholder: "メニューの名前を入れてね" %>
+  <%= f.text_area :url, placeholder: "参考にしたサイトを載せてね" %>
+  <%= f.text_area :recipe, placeholder: "レシピがあったら教えてね" %>
+  <%= f.submit "記録する" %>
+<% end %>
