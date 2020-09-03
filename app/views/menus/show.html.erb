@@ -13,6 +13,7 @@
           </p>
           <%= @menu.user.name %>
           <%= link_to "編集する？", edit_menu_path(@menu) %>
+          <%= link_to "削除する？", menu_path(@menu), method: :delete, data: { confirm: '削除しますか？' } %>
         </div>
       </div>
     </div>
