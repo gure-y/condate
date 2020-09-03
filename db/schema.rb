@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_02_095536) do
+ActiveRecord::Schema.define(version: 2020_09_03_070217) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -34,11 +34,12 @@ ActiveRecord::Schema.define(version: 2020_09_02_095536) do
   end
 
   create_table "bookmarks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "menu_id", null: false
+    t.bigint "user_id"
+    t.bigint "menu_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["menu_id"], name: "index_bookmarks_on_menu_id"
+    t.index ["user_id", "menu_id"], name: "index_bookmarks_on_user_id_and_menu_id", unique: true
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
