@@ -12,8 +12,10 @@
             <%= @menu.url %>
           </p>
           <%= @menu.user.name %>
-          <%= link_to "編集する？", edit_menu_path(@menu) %>
-          <%= link_to "削除する？", menu_path(@menu), method: :delete, data: { confirm: '削除しますか？' } %>
+          <% if user_signed_in? && current_user.id == @menu.user_id %>
+            <%= link_to "編集する？", edit_menu_path(@menu) %>
+            <%= link_to "削除する？", menu_path(@menu), method: :delete, data: { confirm: '削除しますか？' } %>
+          <% end %>
         </div>
       </div>
     </div>

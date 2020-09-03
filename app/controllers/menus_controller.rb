@@ -1,6 +1,7 @@
 class MenusController < ApplicationController
 
   before_action :authenticate_user!, except: [:top, :praise]
+  before_action :cooking_user, only: [:edit, :update, :destroy]
 
     
   def top
@@ -30,11 +31,9 @@ class MenusController < ApplicationController
   end
 
   def edit
-    @menu = Menu.find(params[:id])
   end
 
   def update
-    @menu = Menu.find(params[:id])
     if @menu.valid?
       @menu.update(menu_params)
       redirect_to user_path(current_user)
@@ -44,7 +43,6 @@ class MenusController < ApplicationController
   end
 
   def destroy
-    @menu = Menu.find(params[:id])
     if @menu.destroy
       redirect_to user_path(current_user)
     else
@@ -58,6 +56,11 @@ class MenusController < ApplicationController
   private
   def menu_params
     params.require(:menu).permit(:title, :image, :url, :recipe).merge(user_id: current_user.id)
+  end
+
+  def cooking_user
+    @menu = Menu.find(params[:id])
+    redirect_to root_path if @menu.user_id != current_user.id
   end
 
 end
