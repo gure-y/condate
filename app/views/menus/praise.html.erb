@@ -1,0 +1,9 @@
+<h2>エライ！</h2>
+<br>
+<% if user_signed_in? %>
+  <p>上手にできたら記録しておこう！</p>
+  <%= link_to "記録する？", new_menu_path %>
+<% else %>
+  <p>ログインして記録しておこう！</p>
+  <%= link_to "ログインする？", new_user_session_path %>
+<% end %>

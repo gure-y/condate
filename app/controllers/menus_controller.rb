@@ -48,6 +48,9 @@ def destroy
   end
 end
 
+def praise
+end
+
 private
 def menu_params
   params.require(:menu).permit(:title, :image, :url, :recipe).merge(user_id: current_user.id)
