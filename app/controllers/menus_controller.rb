@@ -3,6 +3,10 @@ def top
   @menus = Menu.includes(:user).order("RAND()").limit(3)
 end
 
+def index
+  @menus = Menu.includes(:user).order("created_at DESC")
+end
+
 def new
   @menu = Menu.new
 end
