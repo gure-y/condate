@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :menus do
     collection do
       get 'top'
+      get 'praise'
     end
   end
   resources :users
