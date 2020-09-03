@@ -1,0 +1,19 @@
+<main class="main">
+  <div class="inner">
+    <h1 class="page-heading">condate!</h1>
+    <%= link_to "トップページへ", root_path %>
+
+    <div class="card__wrapper">
+      <div class="card">
+        <%= image_tag @menu.image.variant(resize:'200x200'), class:"card__img" %>
+        <div class="card__body">
+          <h2 class="card__title"><%= @menu.title %></h2>
+          <p class="card__summary">
+            <%= @menu.url %>
+          </p>
+          <%= @menu.user.name %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

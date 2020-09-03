@@ -4,12 +4,12 @@
     <%= current_user.name %>
     <%= link_to "プロフィールを編集", edit_user_path(current_user) %>
     <%= link_to "投稿する？", new_menu_path %>
-
     <div class="card__wrapper">
       <% @menu.each do |menu| %>
-        <div class="card">
-          <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
-          
+        <%= link_to menu_path(menu) do %>
+          <div class="card">
+            <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
+            <% end %>
           <div class="card__body">
             <h2 class="card__title"><%= menu.title %></h2>
             <p class="card__summary">
