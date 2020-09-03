@@ -10,34 +10,19 @@
     <div class="search">
     冷蔵庫の中身が入る
     </div>
+
     <div class="card__wrapper">
-      <div class="card">
-        <img src="./images/image.png" alt="" class="card__img" />
-        <div class="card__body">
-          <h2 class="card__title">メニュー名</h2>
-          <p class="card__summary">
-            詳細
-          </p>
+      <% @menus.each do |menu| %>
+        <div class="card">
+          <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
+          <div class="card__body">
+            <h2 class="card__title"><%= menu.title %></h2>
+            <p class="card__summary">
+              <%= menu.url %>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./images/image.png" alt="" class="card__img" />
-        <div class="card__body">
-          <h2 class="card__title">メニュー名</h2>
-          <p class="card__summary">
-            詳細
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./images/image.png" alt="" class="card__img" />
-        <div class="card__body">
-          <h2 class="card__title">メニュー名</h2>
-          <p class="card__summary">
-            詳細
-          </p>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </main>

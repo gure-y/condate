@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
 def top
+  @menus = Menu.includes(:user).order("RAND()").limit(3)
 end
 
 def new
