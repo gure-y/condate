@@ -2,8 +2,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    user = User.find(params[:id])
-    @menu = user.menu
+    @user = User.find(params[:id])
+    @menu = @user.menus
+    @bookmark_menus = @user.bookmark_menus
   end
 
   def edit
@@ -15,6 +16,11 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def bookmarks
+    @user = User.find(current_user.id)
+    @bookmark_menus = @user.bookmark_menus
   end
 
   private

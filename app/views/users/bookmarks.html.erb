@@ -1,0 +1,7 @@
+    <p>ブックマークリスト</p>
+    <% @bookmark_menus.each do |menu| %>
+      <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
+      <p> <%= menu.title %></p>
+    <% end %>
+    <%= link_to "トップページへ", root_path %>
+    <%= link_to "マイページへ", user_path(current_user) %>
