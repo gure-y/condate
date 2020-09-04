@@ -2,10 +2,15 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "menus#top"
   resources :menus do
+    resource :bookmarks, only: [:create, :destroy]
     collection do
       get 'top'
       get 'praise'
     end
   end
-  resources :users
+  resources :users do
+    collection do
+      get 'bookmarks'
+    end
+  end
 end

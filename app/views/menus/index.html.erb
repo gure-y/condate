@@ -15,6 +15,11 @@
               <p class="card__summary">
                 <%= menu.url %>
               </p>
+
+            <div id="bookmark_<%= menu.id %>">
+              <%= render partial: "bookmarks/bookmark", locals: { menu: menu } %>
+            </div>
+
             </div>
           </div>
       <% end %>
