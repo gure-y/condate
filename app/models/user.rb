@@ -3,8 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :bookmark
-  has_many :menu
+
+  has_many :menus
+  has_many :bookmarks
+  has_many :bookmark_menus, through: :bookmarks, source: :menu
 
   validates :name, presence: true
 end
