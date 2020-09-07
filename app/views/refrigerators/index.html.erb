@@ -1,0 +1,59 @@
+<h1>冷蔵庫の中身は？</h1>
+<%= search_form_for @r, url: search_refrigerators_path do |f| %>
+  <%= f.label "主食" %>
+  <%= f.check_box :main_eq_any, { multiple: true },"お米" %>
+  お米
+  <%= f.check_box :main_eq_any, { multiple: true },"ラーメン" %>
+  ラーメン
+  <%= f.check_box :main_eq_any, { multiple: true },"うどん" %>
+  うどん
+  <%= f.check_box :main_eq_any, { multiple: true },"パスタ" %>
+  パスタ
+  <br>
+  <%= f.label "お肉" %>
+  <%= f.check_box :meat_eq_any, { multiple: true },"鶏肉" %>
+  鶏肉
+  <%= f.check_box :meat_eq_any, { multiple: true },"豚肉" %>
+  豚肉
+  <%= f.check_box :meat_eq_any, { multiple: true },"牛肉" %>
+  牛肉
+  <%= f.check_box :meat_eq_any, { multiple: true },"ひき肉" %>
+  ひき肉
+  <br>
+  <%= f.label "お魚" %>
+  <%= f.check_box :fish_eq_any, { multiple: true },"サケ" %>
+  サケ
+  <%= f.check_box :fish_eq_any, { multiple: true },"サバ" %>
+  サバ
+  <%= f.check_box :fish_eq_any, { multiple: true },"ブリ" %>
+  ブリ
+  <%= f.check_box :fish_eq_any, { multiple: true },"カジキ" %>
+  カジキ
+  <br>
+  <%= f.label "野菜" %>
+  <%= f.check_box :begetable_eq_any, { multiple: true },"玉ねぎ" %>
+  玉ねぎ
+  <%= f.check_box :begetable_eq_any, { multiple: true },"ナス" %>
+  ナス
+  <%= f.check_box :begetable_eq_any, { multiple: true },"もやし" %>
+  もやし
+   <%= f.check_box :begetable_eq_any, { multiple: true },"ピーマン" %>
+  ピーマン
+  <%= f.check_box :begetable_eq_any, { multiple: true },"にんじん" %>
+  にんじん
+  <%= f.check_box :begetable_eq_any, { multiple: true },"じゃがいも" %>
+  じゃがいも
+  <br>
+  <%= f.label "たまご" %>
+  <%= f.check_box :egg_eq_any, { multiple: true },"1" %>
+  1個
+  <%= f.check_box :egg_eq_any, { multiple: true },"2" %>
+  2個以上ある
+  <br>
+  <%= f.label "お豆腐" %>
+  <%= f.check_box :tofu_eq_any, { multiple: true },"ある" %>
+  ある
+  <br>
+  <%= f.submit "OK" %>
+  <%= link_to "なにもない", empty_refrigerators_path %>
+<% end %>
