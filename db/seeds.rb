@@ -1,6 +1,0 @@
-Refrigerator.create(cooking: 'チキンカレー', main:'お米', meat:'鶏肉', fish:'ない', tofu:'ない', begetable:'玉ねぎ', egg: 'ない')
-Refrigerator.create(cooking: 'ビーフカレー', main:'お米', meat:'牛肉', fish:'ない', tofu:'ない', begetable:'玉ねぎ', egg: 'ない')
-Refrigerator.create(cooking: 'キーマカレー', main:'お米', meat:'ひき肉', fish:'ない', tofu:'ない', begetable:'玉ねぎ', egg: 'ない')
-Refrigerator.create(cooking: 'ラーメン', main:'ラーメン', meat:'ない', fish:'ない', tofu:'ない', begetable:'ない', egg: 'ない' )
-Refrigerator.create(cooking: '外食', main:'ない', meat:'ない', fish:'ない', tofu:'ない', begetable:'ない', egg: 'ない')
-Refrigerator.create(cooking: '出前', main:'ない', meat:'ない', fish:'ない', tofu:'ない', begetable:'ない', egg: 'ない')
