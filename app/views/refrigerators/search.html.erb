@@ -1,0 +1,11 @@
+<h2>今日のごはんは、、</h2>
+
+<% if @results.length != 0 %>
+  <% @results.each do |result| %>
+    <%= result.cooking %>
+  <% end %>
+<% else %>
+  今日は外食にしちゃおう！
+<% end %>
+<br>
+<%= link_to "トップページへ", root_path %>
