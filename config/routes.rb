@@ -13,4 +13,10 @@ Rails.application.routes.draw do
       get 'bookmarks'
     end
   end
+  resources :refrigerators do
+    collection do
+      get 'search'
+      get 'empty'
+    end
+  end
 end
