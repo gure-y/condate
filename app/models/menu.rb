@@ -1,6 +1,6 @@
 class Menu < ApplicationRecord
   belongs_to :user
-  has_many :bookmarks
+  has_many :bookmarks, dependent: :destroy
   has_one_attached :image
 
   validates :title, presence: true
