@@ -1,0 +1,66 @@
+.profile {
+  display: flex;
+  justify-content: center;
+  margin: 3vh 15vw;
+}
+
+.profile-img {
+  height: 20vh;
+}
+
+.middle-profile {
+padding-top: 6vh;
+}
+
+.post {
+  width: 350px;
+  display : inline-block;
+  border-radius : 4px;
+  font-size : 12pt;
+  text-align : center;
+  cursor : pointer;
+  margin-top: 30px;
+  padding : 15px;
+  background : #dfbb76;
+  color : #ffffff;
+  line-height : 1em;
+  border: none;
+}
+.post:hover {
+  opacity : 0.6;
+}
+
+.right-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5vw;
+}
+
+.change-lists {
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  padding: 2vh 7vw;
+  border-bottom: 1px solid #e3d5c3;
+}
+
+.now-list {
+  padding: 2vh 7vw;
+  border-bottom: 2px solid #dfbb76;
+}
+
+.gohan-list {
+  color: #635f5a;
+}
+
+.bookmark-list {
+  color: #635f5a;
+}
+
+.gohan-list-now, .bookmark-list-now {
+  color: #dfbb76;
+  font-weight: bold;
+}

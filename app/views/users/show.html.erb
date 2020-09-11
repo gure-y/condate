@@ -1,24 +1,27 @@
-<main class="main">
-  <div class="inner">
-    <h1 class="page-heading">condate!マイページ</h1>
-    <%= current_user.name %>
-    <%= link_to "プロフィールを編集", edit_user_path(current_user) %>
-    <%= link_to "投稿する？", new_menu_path %>
-    <div class="card__wrapper">
-      <% @menu.reverse_each do |menu| %>
+<%= render "shared/header" %>
+
+<main class="mypage">
+  <%= render "profile" %>
+  <ul class="change-lists">
+    <li class="now-list">
+      <%= link_to "ごはんリスト", user_path(current_user), class: "gohan-list-now" %>
+    </li>
+    <li class="list">
+      <%= link_to "ブックマークリスト", bookmarks_users_path, class: "bookmark-list" %>
+    </li>
+  </ul>
+  <div class="menu-lists">
+    <% @menu.reverse_each do |menu| %>
+      <div class="menu">
         <%= link_to menu_path(menu) do %>
-          <div class="card">
-            <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
-            <% end %>
-          <div class="card__body">
-            <h2 class="card__title"><%= menu.title %></h2>
-            <p class="card__summary">
-              <%= menu.url %>
-            </p>
+          <%= image_tag menu.image, class:"menu-img" %>
+          <div class="menu-body">
+            <div class="menu-title">
+              <%= menu.title %>
+            </div>
           </div>
-        </div>
-      <% end %>
-      <%= link_to "ブックマークリスト", bookmarks_users_path %>
-    </div>
-  </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>    
 </main>
