@@ -1,0 +1,11 @@
+.in-fridge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.in-fridge-title {
+  margin: 10vh 0 3vh;
+  font-size: 20px;
+}

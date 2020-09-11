@@ -1,11 +1,16 @@
-<h2>今日のごはんは、、</h2>
+<%= render "shared/header" %>
 
-<% if @results.length != 0 %>
-  <% @results.each do |result| %>
-    <%= result.cooking %>
-  <% end %>
-<% else %>
-  今日は外食にしちゃおう！
-<% end %>
-<br>
-<%= link_to "トップページへ", root_path %>
+<main class="main">
+  <div class="in-fridge">
+    <% if @results.length != 0 %>
+      <% @results.each do |result| %>
+        <p class="in-fridge-title">今日のごはんは・・・</p>
+        <%# <%= image_tag result.image %> 
+        <p class="in-fridge-title"><%= result.cooking %>！</p>
+      <% end %>
+    <% else %>
+      <p class="in-fridge-title">今日は外食にしましょう！！！！</p>
+    <% end %>
+    <%= button_to "トップページへもどる", root_path, method: :get, class: "btn" %>
+  </div>
+</main>

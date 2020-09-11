@@ -1,2 +1,10 @@
-<h2>今日は外食しちゃお！！！！！</h2>
-<%= link_to "トップページへ", root_path %>
+<%= render "shared/header" %>
+
+
+<main class="main">
+  <div class="in-fridge">
+    <p class="in-fridge-title">今日は外食にしましょう！！！！</p>
+    <%= image_tag "gaisyoku.png" %>
+    <%= button_to "トップページへもどる", root_path, method: :get, class: "btn" %>
+  </div>
+</main>
