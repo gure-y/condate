@@ -1,0 +1,12 @@
+<div class="profile">
+  <div class="left-profile">
+    <%= image_tag "profile-icon.png", class: "profile-img" %>
+  </div>
+  <div class="middle-profile">
+    <%= current_user.name %>
+    <%= button_to "ごはんを記録する", new_menu_path, method: :get, class: "post" %>
+  </div>
+  <div class="right-profile">
+    <%= link_to image_tag("config.png", class: "edit-profile"), edit_user_path(current_user) %>
+  </div>
+</div>

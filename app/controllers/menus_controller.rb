@@ -5,7 +5,7 @@ class MenusController < ApplicationController
 
     
   def top
-    @menus = Menu.includes(:user).order("RAND()").limit(3)
+    @menus = Menu.includes(:user).order("RAND()").limit(4)
   end
 
   def index

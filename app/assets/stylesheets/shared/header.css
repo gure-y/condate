@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.all-page-header {
+  width: 100vw;
+  height: 9vh;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid wheat;
+}
+
+.condate-icon {
+  height: 8vh;
+}
+
+.user-dropdown {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+.mypage {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #635f5a;
+}
+.new-post {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #635f5a;
+}
+
+.logout {
+  text-decoration: none;
+  color: #635f5a;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #635f5a;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #635f5a;
+}

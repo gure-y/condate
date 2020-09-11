@@ -1,28 +1,27 @@
-<main class="main">
-  <div class="inner">
-    <h1 class="page-heading">condate!みんなのごはん</h1>
-    <%= link_to "投稿する？", new_menu_path %>
-    <%= link_to "マイページ", user_path(current_user) %> 
+<%= render "shared/header" %>
 
-    <div class="card__wrapper">
+<div class="middle--content">
+  <p class="index">みんなのごはん</p>
+</div>
+
+<div class="bottom--content">
+    <div class="menu-lists">
       <% @menus.each do |menu| %>
-        <%= link_to menu_path(menu) do %>
-          <div class="card">
-            <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
-            <% end %>
-            <div class="card__body">
-              <h2 class="card__title"><%= menu.title %></h2>
-              <p class="card__summary">
-                <%= menu.url %>
-              </p>
-
-            <div id="bookmark_<%= menu.id %>">
-              <%= render partial: "bookmarks/bookmark", locals: { menu: menu } %>
+        <div class="menu">
+          <%= link_to menu_path(menu) do %>
+            <%= image_tag menu.image, class:"menu-img" %>
+            
+            <div class="menu-body">
+              <div class="menu-title">
+                <%= menu.title %>
+              </div>
+              <div id="bookmark_<%= menu.id %>", class="bookmark-icon">
+                <%= render partial: "bookmarks/bookmark", locals: { menu: menu } %>
+              </div>
             </div>
 
-            </div>
-          </div>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>
-</main>

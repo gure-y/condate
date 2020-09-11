@@ -1,36 +1,42 @@
-<main class="main">
-  <div class="inner">
-    <h1 class="page-heading">condate!</h1>
-    <% if user_signed_in? %>
-      <%= link_to "マイページ", user_path(current_user) %> 
-    <% else %>
-      <%= link_to "新規登録", new_user_registration_path %>
-    <% end %>
-    <%= link_to "投稿する？", new_menu_path %>
-    <div class="search">
-      <h3>今日のごはん決めた？</h3>
-      <%= link_to "決めた！", praise_menus_path %>
-      <%= link_to "まだ", refrigerators_path %>
-    </div>
-    <div>
-      <%= link_to "みんなのごはんを全部見る", menus_path %>
-    </div>
+<%= render "shared/header" %>
 
-     <div class="card__wrapper">
+<main class="main">
+  <div class="upper-content">
+    <div class="today">
+      今日のごはん決めた？
+    </div>
+    <div class="yes-or-yet">
+      <div class="left-icon">
+        <%= link_to "決めた！", praise_menus_path, class: "yes" %>
+      </div>
+      <div class="right-icon">
+        <%= link_to "まだ", refrigerators_path, class: "yet" %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="middle-content">
+    <%= link_to "みんなのごはんを全部見る➡︎", menus_path, class: "to-index" %>
+  </div>
+
+  <div class="bottom-content">
+    <div class="menu-lists">
       <% @menus.each do |menu| %>
-        <%= link_to menu_path(menu) do %>
-          <div class="card">
-            <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
-            <% end %>
-          <div class="card__body">
-            <h2 class="card__title"><%= menu.title %></h2>
-            <p class="card__summary">
-              <%= menu.url %>
-            </p>
-            <div id="bookmark_<%= menu.id %>">
-              <%= render partial: "bookmarks/bookmark", locals: { menu: menu } %>
+        <div class="menu">
+          <%= link_to menu_path(menu) do %>
+            <%= image_tag menu.image, class:"menu-img" %>
+            
+            <div class="menu-body">
+              <div class="menu-title">
+                <%= menu.title %>
+              </div>
+              <div id="bookmark_<%= menu.id %>", class="bookmark-icon">
+                <%= render partial: "bookmarks/bookmark", locals: { menu: menu } %>
+              </div>
             </div>
-          </div>
+
+          <% end %>
         </div>
       <% end %>
     </div>

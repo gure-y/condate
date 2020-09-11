@@ -1,49 +1,35 @@
-<div class='account-page' id='account-page'>
-  <div class='account-page__inner clearfix'>
-    <div class='account-page__inner--left account-page__header'>
-      <h2>Create Account</h2>
-      <h5>新規アカウントの作成</h5>
-    </div>
-    <div class='account-page__inner--right user-form'>
-      <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
-        <%= devise_error_messages!%>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :name%>
-          </div>
-          <div class='field-input'>
-            <%= f.text_field :name, autofocus: true%>
-          </div>
-        </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :email%>
-          </div>
-          <div class='field-input'>
-            <%= f.email_field :email%>
-          </div>
-        </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :password%>
-            <i>(英数字8文字以上)</i>
-          </div>
-          <div class='field-input'>
-            <%= f.password_field :password, autocomplete: "off"%>
-          </div>
-        </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :password_confirmation%>
-          </div>
-          <div class='field-input'>
-            <%= f.password_field :password_confirmation, autocomplete: "off"%>
-          </div>
-        </div>
-        <div class='actions'>
-          <%= f.submit "Create Account", class: 'btn'%>
-        </div>
-      </div>
-    <% end %>
+<%= render "shared/header" %>
+
+<div class="account-page">
+  <div class="account-page-title">
+    新規登録
   </div>
+  
+  <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
+    <div class="account-page-form">
+      <div class='field'>
+        <%= f.label "お名前" %>
+        <%= f.text_field :name, autofocus: true, class: 'field-input'%>
+      </div>
+      <div class='field'>
+        <%= f.label "メールアドレス" %>
+        <%= f.email_field :email, class: 'field-input'%>
+      </div>
+      <div class='field'>
+        <%= f.label "パスワード（英数字8文字以上）" %>
+        <%= f.password_field :password, autocomplete: "off", class: 'field-input'%>
+      </div>
+      <div class='field'>
+        <%= f.label "パスワード（確認用）" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'field-input'%>
+      </div>
+      <div>
+        <%= f.submit "登録する", class: 'btn'%>
+      </div>
+      <div class='actions'>
+        アカウントをお持ちの方はこちら
+        <%= link_to "ログイン", new_user_session_path, class: "here" %>
+      </div>
+    </div>
+  <% end %>
 </div>

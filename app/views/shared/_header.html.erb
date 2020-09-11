@@ -1,0 +1,28 @@
+<header class='all-page-header'>
+  <div class="top-page-image">
+    <%= link_to image_tag("condate-bear.png", class: "condate-icon"), root_path %>
+  </div>
+
+  <div class="for-user">
+    <ul class="user-dropdown" id="pulldown">
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to "マイページ", user_path(current_user), class: "mypage" %>
+        </li>
+        <li>
+          <%= link_to "記録する", new_menu_path, class: "new-post" %>
+        </li>
+        <li>
+          <%= link_to "ログアウト", destroy_user_session_path , class: "logout" %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "ログイン", new_user_session_path, class: "login" %>
+        </li>
+        <li>
+          <%= link_to "新規登録", new_user_registration_path , class: "sign-up" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</header>

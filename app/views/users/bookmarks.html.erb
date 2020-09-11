@@ -1,7 +1,27 @@
-    <p>ブックマークリスト</p>
+<%= render "shared/header" %>
+
+<main class="mypage">
+  <%= render "profile" %>
+  <ul class="change-lists">
+    <li class="list">
+      <%= link_to "ごはんリスト", user_path(current_user), class: "gohan-list" %>
+    </li>
+    <li class="now-list">
+      <%= link_to "ブックマークリスト", bookmarks_users_path, class: "bookmark-list-now" %>
+    </li>
+  </ul>
+  <div class="menu-lists">
     <% @bookmark_menus.each do |menu| %>
-      <%= image_tag menu.image.variant(resize:'200x200'), class:"card__img" %>
-      <p> <%= menu.title %></p>
+      <div class="menu">
+        <%= link_to menu_path(menu) do %>
+          <%= image_tag menu.image, class:"menu-img" %>
+          <div class="menu-body">
+            <div class="menu-title">
+              <%= menu.title %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     <% end %>
-    <%= link_to "トップページへ", root_path %>
-    <%= link_to "マイページへ", user_path(current_user) %>
+  </div>
+</main>

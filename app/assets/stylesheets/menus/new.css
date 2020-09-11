@@ -1,0 +1,81 @@
+.menu-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5vh;
+}
+
+.post-title {
+  width: 40vw;
+  border-bottom: 1px solid #e3d5c3;
+  display: flex;
+  justify-content: center;
+  margin: 5vh;
+}
+
+.menu-post-image {
+  height: 20vh;
+  justify-content: center;
+}
+
+.menu--title {
+  width: 40vw;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.menu-post-title, .menu-post-url, .menu-post-recipe {
+  margin: 0.2vh;
+  padding-top: 1vh;
+}
+
+.menu--url {
+  width: 40vw;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.menu--recipe {
+  width: 40vw;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+.menu--recipe:focus, .menu--title:focus, .menu--url:focus {
+  border: 2px solid #dfbb76;
+  outline: 0;
+}
+
+.post-submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  width: 350px;
+  display : inline-block;
+  border-radius : 4px;
+  font-size : 12pt;
+  text-align : center;
+  cursor : pointer;
+  margin-top: 30px;
+  padding : 15px;
+  background : #ffffff;
+  color : #dfbb76;
+  line-height : 1em;
+  border: 2px solid #dfbb76;
+}
