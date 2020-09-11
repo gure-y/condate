@@ -6,6 +6,10 @@
   </div>
   
   <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+    <div class='login-flash-message'>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+    </div>
     <div class="account-page-form">
       <div class='field'>
         <%= f.label "メールアドレス" %>

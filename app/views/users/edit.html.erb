@@ -9,10 +9,16 @@
       <div class='field'>
         <%= f.label "お名前" %>
         <%= f.text_field :name, autofocus: true, class: 'field-input'%>
+        <% if current_user.errors.include?(:name) %>
+         <p class="error-message"><%= current_user.errors.full_messages_for(:name).first %>
+        <% end %>
       </div>
       <div class='field'>
         <%= f.label "メールアドレス" %>
         <%= f.email_field :email, class: 'field-input'%>
+        <% if current_user.errors.include?(:email) %>
+         <p class="error-message"><%= current_user.errors.full_messages_for(:email).first %>
+        <% end %>
       </div>
       <%= f.submit "保存する", class: 'btn'%>
       <%= button_to "キャンセル", user_path(current_user),method: :get, class: "cancel" %>
