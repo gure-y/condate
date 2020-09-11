@@ -1,9 +1,51 @@
-<h3>編集</h3>
+<header class='all-page-header'>
+  <div class="top-page-image">
+    <%= link_to image_tag("condate-bear.png", class: "condate-icon"), root_path %>
+  </div>
+  <div class="for-user">
+    <ul class="user-dropdown" id="pulldown">
+      <li>
+        <%= link_to "マイページ", user_path(current_user), class: "mypage" %>
+      </li>
+      <li>
+        <%= link_to "ログアウト", destroy_user_session_path , class: "logout" %>
+      </li>
+    </ul>
+  </div>
+</header>
 
-<%= form_with model: @menu, local: true do |f| %>
-  <%= f.file_field :image %>
-  <%= f.text_area :title, placeholder: "メニューの名前を入れてね" %>
-  <%= f.text_area :url, placeholder: "参考にしたサイトを載せてね" %>
-  <%= f.text_area :recipe, placeholder: "レシピがあったら教えてね" %>
-  <%= f.submit "記録する" %>
-<% end %>
+<main class="main">
+  <%= form_with model: @menu, local: true do |f| %>
+    <div class="menu-post">
+      <div class="post-title">
+        <p>編集する</p>
+      </div>
+      <div class="menu-post-images">
+        <p>ごはんの写真</p>
+        <div class="menu-post-image">
+          <div id="image-list">
+          </div>
+          <%= f.file_field :image, class: "menu--img" %>
+        </div>
+      </div>
+      <div class="menu-post-titles">
+        <p class="menu-post-title">料理の名前</p>
+        <%= f.text_area :title, placeholder: "例）オムライス", class: "menu--title" %>
+      <div>
+      <div class="menu-post-urls">
+        <p class="menu-post-url">レシピURL</p>
+          <%= f.text_area :url, placeholder: "参考にしたサイトがあったら教えてください", class: "menu--url" %>
+      </div>
+      <div class="menu-post-recipes">
+        <p class="menu-post-recipe">レシピ</p>
+        <%= f.text_area :recipe, placeholder: "もしレシピがあったら教えてください", class: "menu--recipe", raw: 10 %> 
+      </div>
+      <div class="post-submit">
+        <%= f.submit "記録する", class: "btn"%>
+      </div>
+    </div>
+  <% end %>
+  <div class="post-submit">
+    <%= button_to "キャンセル", user_path(current_user), method: :get, class: "back" %>
+  </div>
+</main>

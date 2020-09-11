@@ -11,13 +11,40 @@
   border-bottom: 1px solid #e3d5c3;
   display: flex;
   justify-content: center;
-  margin: 5vh;
+  margin: 2vh;
+}
+
+.menu-post-images {
+  width: 40vw;
+
+}
+
+.preview-image {
+  width: 20vh;
 }
 
 .menu-post-image {
-  height: 20vh;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
+
+/* .menu--img {
+  display: none;
+} */
+.menu-label {
+  width: 30vw;
+  height: 30vh;
+  background-color: #e3d5c3;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 30px;
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+
 
 .menu--title {
   width: 40vw;

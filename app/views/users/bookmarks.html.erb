@@ -14,7 +14,7 @@
     <% @bookmark_menus.each do |menu| %>
       <div class="menu">
         <%= link_to menu_path(menu) do %>
-          <%= image_tag menu.image, class:"menu-img" %>
+          <%= image_tag menu.image.variant(combine_options:{gravity: :center, resize:"640x640^", crop:"640x640+0+0"}).processed, class:"menu-img" %>
           <div class="menu-body">
             <div class="menu-title">
               <%= menu.title %>
