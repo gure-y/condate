@@ -6,12 +6,8 @@
       今日のごはん決めた？
     </div>
     <div class="yes-or-yet">
-      <div class="left-icon">
-        <%= link_to "決めた！", praise_menus_path, class: "yes" %>
-      </div>
-      <div class="right-icon">
-        <%= link_to "まだ", refrigerators_path, class: "yet" %>
-      </div>
+        <%= button_to "決めた！", praise_menus_path, method: :get, class: "select-icon" %>
+        <%= button_to "まだ", refrigerators_path, method: :get, class: "select-icon" %>
     </div>
   </div>
 

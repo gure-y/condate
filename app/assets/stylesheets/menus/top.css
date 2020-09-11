@@ -30,38 +30,25 @@ a{
   text-decoration: none;
 }
 
-.left-icon {
-  width: 15vw;
+.select-icon {
+  color: #dfbb76;
+  line-height: 7vh;
+  width: 16vw;
   height: 7vh;
   border: 2px solid #dfbb76;
-  border-radius: 3px;
+  border-radius: 30px;
+  color: #dfbb76;
   font-weight: bold;
+  color: #dfbb76;
   text-align: center;
-  margin-right: 10px;
+  font-size: 2vh;
+  background-color: #ffffff;
+  margin: 0 3vw;
+}
+.select-icon:hover {
   background-color: #dfbb76;
+  color: #ffffff;
 }
-
-.yes {
-  color: white;
-  line-height: 7vh;
-}
-
-.yet {
-  color: #dfbb76;
-  line-height: 7vh;
-}
-
-.right-icon {
-  width: 10vw;
-  height: 7vh;
-  border: 2px solid #dfbb76;
-  border-radius: 3px;
-  color: #dfbb76;
-  font-weight: bold;
-  color: #dfbb76;
-  text-align: center;
-}
-
 
 .middle-content {
   padding: 1vh 0;
@@ -77,14 +64,15 @@ a{
 
 .bottom-content {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .menu-lists {
-  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .menu {
@@ -104,7 +92,16 @@ a{
   border-radius: 5px;
 }
 .menu-title {
-  font-size: 1.5vh;
+  font-size: 2vh;
   padding: 0 1vw;
   color: #635f5a;
+}
+
+.bookmark-btn {
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+}
+.bookmark-icon {
+  height: 3vh;
 }
