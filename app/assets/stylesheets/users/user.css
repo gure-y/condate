@@ -1,0 +1,100 @@
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+  }
+
+.account-page {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 13vw;
+  align-items: center;
+}
+
+.account-page-title {
+  width: 70%;
+  font-size: 20px;
+  color: #635f5a;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #e3d5c3;
+}
+
+.account-page-form {
+  font-size: 16px;
+  color: #635f5a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  margin: 10px;
+}
+
+.field-input {
+  width: 350px;
+  height: 50px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+  margin: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.field-input:hover {
+  background-color: whitesmoke;
+}
+.field-input:focus {
+  border: 2px solid #dfbb76;
+  outline: 0;
+}
+
+
+.btn {
+  width: 350px;
+  display : inline-block;
+  border-radius : 4px;
+  font-size : 12pt;
+  text-align : center;
+  cursor : pointer;
+  margin-top: 30px;
+  padding : 15px;
+  background : #dfbb76;
+  color : #ffffff;
+  line-height : 1em;
+  border: none;
+}
+.btn:hover {
+  opacity       : 0.6;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.here {
+  color: #edb64f;
+}
+
+.cancel {
+  width: 350px;
+  display : inline-block;
+  border-radius : 4px;
+  font-size : 12pt;
+  text-align : center;
+  cursor : pointer;
+  margin-top: 30px;
+  padding : 15px;
+  background : #ffffff;
+  color : #dfbb76;
+  line-height : 1em;
+  border: 2px solid #dfbb76;
+}
+
