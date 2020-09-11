@@ -1,0 +1,104 @@
+.menu-detail {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.left-menu {
+  width: 40vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2vw;
+}
+
+.menu--img {
+  height: 40vh;
+  border-radius: 6px;
+}
+
+.btns {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-btn {
+  width: 20vw;
+  height: 5vh;
+  display : inline-block;
+  border-radius : 4px;
+  font-size : 1.5vh;
+  text-align : center;
+  cursor : pointer;
+  padding : 15px;
+  background : #dfbb76;
+  color : #ffffff;
+  line-height : 1em;
+  border: 2px solid #dfbb76;
+  margin-right: 4vw;
+}
+.edit-btn:hover {
+  opacity       : 0.6;
+}
+
+.delete-btn {
+  width: 20vw;
+  height: 5vh;
+  display : inline-block;
+  border-radius : 4px;
+  font-size : 1.5vh;
+  text-align : center;
+  cursor : pointer;
+  padding : 15px;
+  background : #ffffff;
+  color : #dfbb76;
+  line-height : 1em;
+  border: 2px solid #dfbb76;
+  margin-left: 4vw;
+}
+.delete-btn:hover {
+  background-color: #fff9ef;
+}
+
+
+.right-menu {
+  width: 40vw;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right-menu-detail {
+  width: 100%;
+  color: #635f5a;
+}
+
+.menu-title-user {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid #e3d5c3;
+}
+
+.menu-detail-title {
+  font-size: 3vh;
+  font-weight: bold;
+  padding-right: 1vw;
+}
+.cooked-name {
+  font-size: 2vh;
+  color: #827b74;
+  padding-bottom: 0.5vh;
+}
+.right-bookmark-icon {
+  margin-left: 2vw;
+}
+
+.menu-detail-url {
+  margin-top: 2vh;
+  font-size: 2vh;
+  border-bottom: 1px solid #e3d5c3;
+}
+.menu-detail-recipe {
+  margin-top: 2vh;
+  font-size: 2vh;
+  border-bottom: 1px solid #e3d5c3;
+}
