@@ -1,0 +1,4 @@
+.error-message, .login-flash-message {
+  margin-top: 0;
+  color: #ea5e5e;
+}
