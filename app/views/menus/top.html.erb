@@ -38,3 +38,8 @@
     </div>
   </div>
 </main>
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
+    <%= link_to "メニューを増やす", administrator_refrigerators_path %>
+  <% end %>
+<% end %>
