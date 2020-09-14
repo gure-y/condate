@@ -1,0 +1,14 @@
+.menu-from-fridge {
+  display: flex;
+}
+
+.menu-lists-from-fridge {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.menu-body-from-fridge {
+  display: flex;
+  flex-direction: column;
+}

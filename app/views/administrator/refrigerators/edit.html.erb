@@ -1,0 +1,59 @@
+<%= render "shared/header" %>
+<h1>メニューを変える</h1>
+<%= form_with model: [ :administrator, @refrigerator ], url: administrator_refrigerator_path, local: true do |f|%>
+  <%= render 'shared/error_messages', model: f.object %>
+  <p>料理名</p>
+  <%= f.text_field :cooking %>
+  <p>画像</p>
+  <%= f.file_field :image %>
+  <p>主食</p>
+    <%= f.radio_button :main, "お米" %>
+    <%= f.label "お米" %>
+    <%= f.radio_button :main, "ラーメン" %>
+    <%= f.label "ラーメン" %>
+    <%= f.radio_button :main, "うどん" %>
+    <%= f.label "うどん" %>
+    <%= f.radio_button :main, "パスタ" %>
+    <%= f.label "パスタ" %>
+  <p>お肉</p>
+    <%= f.radio_button :meat, "鶏肉" %>
+    <%= f.label "鶏肉" %>
+    <%= f.radio_button :meat, "豚肉" %>
+    <%= f.label "豚肉" %>
+    <%= f.radio_button :meat, "牛肉" %>
+    <%= f.label "牛肉" %>
+    <%= f.radio_button :meat, "ひき肉" %>
+    <%= f.label "ひき肉" %>
+  <p>お魚</p>
+    <%= f.radio_button :fish, "サケ" %>
+    <%= f.label "サケ" %>
+    <%= f.radio_button :fish, "サバ" %>
+    <%= f.label "サバ" %>
+    <%= f.radio_button :fish, "ブリ" %>
+    <%= f.label "ブリ" %>
+    <%= f.radio_button :fish, "カジキ" %>
+    <%= f.label "カジキ" %>
+  <p>野菜</p>
+    <%= f.radio_button :begetable, "玉ねぎ" %>
+    <%= f.label "玉ねぎ" %>
+    <%= f.radio_button :begetable, "ナス" %>
+    <%= f.label "ナス" %>
+    <%= f.radio_button :begetable, "もやし" %>
+    <%= f.label "もやし" %>
+    <%= f.radio_button :begetable, "ピーマン" %>
+    <%= f.label "ピーマン" %>
+    <%= f.radio_button :begetable, "にんじん" %>
+    <%= f.label "にんじん" %>
+    <%= f.radio_button :begetable, "じゃがいも" %>
+    <%= f.label "じゃがいも" %>
+  <p>たまご</p>
+    <%= f.radio_button :egg, "1" %>
+    <%= f.label "1個" %>
+    <%= f.radio_button :egg, "2" %>
+    <%= f.label "2個以上ある" %>
+  <p>豆腐</p>
+    <%= f.radio_button :tofu, "ある" %>
+    <%= f.label "ある" %>
+    <br>
+  <%= f.submit %>
+<% end %>

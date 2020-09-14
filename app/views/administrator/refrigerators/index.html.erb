@@ -1,0 +1,37 @@
+<%= render "shared/header" %>
+
+<h1>冷蔵庫の中身からできるメニュー一覧</h1>
+<%= link_to "メニューを増やす", new_administrator_refrigerator_path %>
+<div class="menu-from-fridge">
+    <div class="menu-lists-from-fridge">
+      <% @refrigerators.each do |menu| %>
+        <div class="menu-body-from-fridge">
+          <% if menu.image.attached? %>
+            <%= image_tag menu.image.variant(combine_options:{gravity: :center, resize:"640x640^", crop:"640x640+0+0"}).processed, class:"menu-img" %>
+          <% end %>
+          <%= menu.cooking %>
+          <p>材料</p>
+          <% if menu.main.present? %>
+            <%= menu.main %>
+          <% end %>
+          <% if menu.meat.present? %>
+            <%= menu.meat %>
+          <% end %>
+          <% if menu.fish.present? %>
+            <%= menu.fish %>
+          <% end %>
+          <% if menu.begetable.present? %>
+            <%= menu.begetable %>
+          <% end %>
+          <% if menu.egg.present? %>
+            <%= menu.egg %>
+          <% end %>
+          <% if menu.tofu.present? %>
+            <%= menu.tofu %>
+          <% end %>
+          <%= link_to "編集", edit_administrator_refrigerator_path(menu) %>
+          <%= link_to "削除", administrator_refrigerator_path(menu), method: :delete, data: { confirm: '削除しますか？' } %>
+        </div>
+      <% end %>
+    </div>
+  </div>

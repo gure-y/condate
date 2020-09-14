@@ -19,4 +19,8 @@ Rails.application.routes.draw do
       get 'empty'
     end
   end
+  namespace :administrator do
+    resources :refrigerators
+  end
+
 end
