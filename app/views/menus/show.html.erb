@@ -5,7 +5,9 @@
     <div class="left-menu">
       <div class="left-menu-detail">
         <div class="menu-detail-img">
+          <% if @menu.image.attached? %>
           <%= image_tag @menu.image.variant(combine_options:{gravity: :center, resize:"640x640^", crop:"640x640+0+0"}).processed, class: "menu--img" %>
+          <% end %>
         </div>
       </div>
     </div>
