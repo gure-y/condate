@@ -1,0 +1,27 @@
+.footer {
+  width: 100vw;
+  height: 20vh;
+  background-color: #ebe1d5;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.condate-images {
+  display: flex;
+}
+
+.footer-bear-img {
+  height: 8vh;
+}
+
+.footer-img {
+  height: 10vh;
+}
+
+.copy-right {
+  color: #fff;
+  margin: 0;
+}
