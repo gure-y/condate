@@ -1,144 +1,149 @@
 <%= render "shared/header" %>
 
-<main class="main">
-  <div class="fridge">
-    <div class="fridge-title">
-      <p>冷蔵庫に入っているのは？</p>
-    </div>
-    <%= search_form_for @r, url: search_refrigerators_path do |f| %>
-      <div class="fridge-lists">
-        <div class="fridge-list">
-          <div class="fridge-list-title">
-            <%= f.label "主食" %>
-          </div>
-          <div class="fridge-list-ing">
-            <div class="ing">
-            <%= f.check_box :main_eq_any, { multiple: true }, "お米" %>
-            お米
-            </div>
-            <div class="ing">
-            <%= f.check_box :main_eq_any, { multiple: true },"ラーメン" %>
-            ラーメン
-            </div>
-            <div class="ing">
-            <%= f.check_box :main_eq_any, { multiple: true },"うどん" %>
-            うどん
-            </div>
-            <div class="ing">
-            <%= f.check_box :main_eq_any, { multiple: true },"パスタ" %>
-            パスタ
-            </div>
-          </div>
+<div class="wrapper">
+  <div class="opacity-paper">
+    <main class="main">
+      <div class="fridge">
+        <div class="fridge-title">
+          <p>冷蔵庫に入っているのは？</p>
         </div>
-        <div class="fridge-list">
-          <div class="fridge-list-title">
-              <%= f.label "お肉" %>
+        <%= search_form_for @r, url: search_refrigerators_path do |f| %>
+          <div class="fridge-lists">
+            <div class="fridge-list">
+              <div class="fridge-list-title">
+                <%= f.label "主食" %>
+              </div>
+              <div class="fridge-list-ing">
+                <div class="ing">
+                <%= f.check_box :main_eq_any, { multiple: true }, "お米" %>
+                お米
+                </div>
+                <div class="ing">
+                <%= f.check_box :main_eq_any, { multiple: true },"ラーメン" %>
+                ラーメン
+                </div>
+                <div class="ing">
+                <%= f.check_box :main_eq_any, { multiple: true },"うどん" %>
+                うどん
+                </div>
+                <div class="ing">
+                <%= f.check_box :main_eq_any, { multiple: true },"パスタ" %>
+                パスタ
+                </div>
+              </div>
+            </div>
+            <div class="fridge-list">
+              <div class="fridge-list-title">
+                  <%= f.label "お肉" %>
+              </div>
+              <div class="fridge-list-ing">
+                <div class="ing">
+                <%= f.check_box :meat_eq_any, { multiple: true },"鶏肉" %>
+                鶏肉
+                </div>
+                <div class="ing">
+                <%= f.check_box :meat_eq_any, { multiple: true },"豚肉" %>
+                豚肉
+                </div>
+                <div class="ing">
+                <%= f.check_box :meat_eq_any, { multiple: true },"牛肉" %>
+                牛肉
+                </div>
+                <div class="ing">
+                <%= f.check_box :meat_eq_any, { multiple: true },"ひき肉" %>
+                ひき肉
+                </div>
+              </div>
+            </div>
+            <div class="fridge-list">
+              <div class="fridge-list-title">
+                <%= f.label "お魚" %>
+              </div>
+              <div class="fridge-list-ing">
+                <div class="ing">
+                <%= f.check_box :fish_eq_any, { multiple: true },"サケ" %>
+                サケ
+                </div>
+                <div class="ing">
+                <%= f.check_box :fish_eq_any, { multiple: true },"サバ" %>
+                サバ
+                </div>
+                <div class="ing">
+                <%= f.check_box :fish_eq_any, { multiple: true },"ブリ" %>
+                ブリ
+                </div>
+                <div class="ing">
+                <%= f.check_box :fish_eq_any, { multiple: true },"カジキ" %>
+                カジキ
+                </div>
+              </div>
+            </div>
+            <div class="fridge-list">
+              <div class="fridge-list-title">
+                <%= f.label "野菜" %>
+              </div>
+              <div class="fridge-list-ing">
+                <div class="ing">
+                <%= f.check_box :begetable_eq_any, { multiple: true },"玉ねぎ" %>
+                玉ねぎ
+                </div>
+                <div class="ing">
+                <%= f.check_box :begetable_eq_any, { multiple: true },"ナス" %>
+                ナス
+                </div>
+                <div class="ing">
+                <%= f.check_box :begetable_eq_any, { multiple: true },"もやし" %>
+                もやし
+                </div>
+                <div class="ing">
+                <%= f.check_box :begetable_eq_any, { multiple: true },"ピーマン" %>
+                ピーマン
+                </div>
+                <div class="ing">
+                <%= f.check_box :begetable_eq_any, { multiple: true },"にんじん" %>
+                にんじん
+                </div>
+                <div class="ing">
+                <%= f.check_box :begetable_eq_any, { multiple: true },"じゃがいも" %>
+                じゃがいも
+                </div>
+              </div>
+            </div>
+            <div class="fridge-list">
+              <div class="fridge-list-title">
+                <%= f.label "たまご" %>
+              </div>
+              <div class="fridge-list-ing">
+                <div class="ing">
+                <%= f.check_box :egg_eq_any, { multiple: true },"1" %>
+                1個
+                </div>
+                <div class="ing">
+                <%= f.check_box :egg_eq_any, { multiple: true },"2" %>
+                2個以上ある
+                </div>
+              </div>
+            </div>
+            <div class="fridge-list">
+              <div class="fridge-list-title">
+                <%= f.label "お豆腐" %>
+              </div>
+              <div class="fridge-list-ing">
+                <div class="ing">
+                <%= f.check_box :tofu_eq_any, { multiple: true },"ある" %>
+                ある
+                </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="fridge-list-ing">
-            <div class="ing">
-            <%= f.check_box :meat_eq_any, { multiple: true },"鶏肉" %>
-            鶏肉
-            </div>
-            <div class="ing">
-            <%= f.check_box :meat_eq_any, { multiple: true },"豚肉" %>
-            豚肉
-            </div>
-            <div class="ing">
-            <%= f.check_box :meat_eq_any, { multiple: true },"牛肉" %>
-            牛肉
-            </div>
-            <div class="ing">
-            <%= f.check_box :meat_eq_any, { multiple: true },"ひき肉" %>
-            ひき肉
-            </div>
+          <div class="btns">
+            <%= f.submit "OK", class: "ok-btn"%>
+          <% end %>
+            <%= button_to "なにもない", empty_refrigerators_path, method: :get, class: "empty-btn" %>
           </div>
-        </div>
-        <div class="fridge-list">
-          <div class="fridge-list-title">
-            <%= f.label "お魚" %>
-          </div>
-          <div class="fridge-list-ing">
-            <div class="ing">
-            <%= f.check_box :fish_eq_any, { multiple: true },"サケ" %>
-            サケ
-            </div>
-            <div class="ing">
-            <%= f.check_box :fish_eq_any, { multiple: true },"サバ" %>
-            サバ
-            </div>
-            <div class="ing">
-            <%= f.check_box :fish_eq_any, { multiple: true },"ブリ" %>
-            ブリ
-            </div>
-            <div class="ing">
-            <%= f.check_box :fish_eq_any, { multiple: true },"カジキ" %>
-            カジキ
-            </div>
-          </div>
-        </div>
-        <div class="fridge-list">
-          <div class="fridge-list-title">
-            <%= f.label "野菜" %>
-          </div>
-          <div class="fridge-list-ing">
-            <div class="ing">
-            <%= f.check_box :begetable_eq_any, { multiple: true },"玉ねぎ" %>
-            玉ねぎ
-            </div>
-            <div class="ing">
-            <%= f.check_box :begetable_eq_any, { multiple: true },"ナス" %>
-            ナス
-            </div>
-            <div class="ing">
-            <%= f.check_box :begetable_eq_any, { multiple: true },"もやし" %>
-            もやし
-            </div>
-            <div class="ing">
-            <%= f.check_box :begetable_eq_any, { multiple: true },"ピーマン" %>
-            ピーマン
-            </div>
-            <div class="ing">
-            <%= f.check_box :begetable_eq_any, { multiple: true },"にんじん" %>
-            にんじん
-            </div>
-            <div class="ing">
-            <%= f.check_box :begetable_eq_any, { multiple: true },"じゃがいも" %>
-            じゃがいも
-            </div>
-          </div>
-        </div>
-        <div class="fridge-list">
-          <div class="fridge-list-title">
-            <%= f.label "たまご" %>
-          </div>
-          <div class="fridge-list-ing">
-            <div class="ing">
-            <%= f.check_box :egg_eq_any, { multiple: true },"1" %>
-            1個
-            </div>
-            <div class="ing">
-            <%= f.check_box :egg_eq_any, { multiple: true },"2" %>
-            2個以上ある
-            </div>
-          </div>
-        </div>
-        <div class="fridge-list">
-          <div class="fridge-list-title">
-            <%= f.label "お豆腐" %>
-          </div>
-          <div class="fridge-list-ing">
-            <div class="ing">
-            <%= f.check_box :tofu_eq_any, { multiple: true },"ある" %>
-            ある
-            </div>
-            </div>
-          </div>
-        </div>
       </div>
-      <div class="btns">
-        <%= f.submit "OK", class: "ok-btn"%>
-      <% end %>
-        <%= button_to "なにもない", empty_refrigerators_path, method: :get, class: "empty-btn" %>
-      </div>
+    </main>
   </div>
-</main>
+  <%= render "shared/footer" %>
+</div>

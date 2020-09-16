@@ -1,21 +1,27 @@
 <%= render "shared/header" %>
 
-<div class="account-page">
-  <div class="account-page-title">
-    アカウントの編集
+<div class="wrapper">
+  <div class="opacity-paper">
+    <main class="main">
+      <div class="account-page">
+        <div class="account-page-title">
+          アカウントの編集
+        </div>
+        <%= form_with model: current_user, local: true do |f|%>
+          <div class="account-page-form">
+            <div class='field'>
+              <%= f.label "お名前" %>
+              <%= f.text_field :name, autofocus: true, class: 'field-input'%>
+            </div>
+            <div class='field'>
+              <%= f.label "メールアドレス" %>
+              <%= f.email_field :email, class: 'field-input'%>
+            </div>
+            <%= f.submit "保存する", class: 'btn'%>
+            <%= button_to "キャンセル", user_path(current_user),method: :get, class: "cancel" %>
+          </div>
+        <% end %>
+      </div>
+    </main>
   </div>
-  <%= form_with model: current_user, local: true do |f|%>
-    <div class="account-page-form">
-      <div class='field'>
-        <%= f.label "お名前" %>
-        <%= f.text_field :name, autofocus: true, class: 'field-input'%>
-      </div>
-      <div class='field'>
-        <%= f.label "メールアドレス" %>
-        <%= f.email_field :email, class: 'field-input'%>
-      </div>
-      <%= f.submit "保存する", class: 'btn'%>
-      <%= button_to "キャンセル", user_path(current_user),method: :get, class: "cancel" %>
-    </div>
-  <% end %>
 </div>

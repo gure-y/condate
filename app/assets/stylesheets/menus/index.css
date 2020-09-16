@@ -1,5 +1,4 @@
 .middle--content {
-  margin: 0 15vw;
   text-align: center;
   border-bottom: 1px solid #e3d5c3;
 }
@@ -12,5 +11,4 @@
 .bottom--content {
   display: flex;
   align-items: center;
-  margin: 3vh 13vw;
 }

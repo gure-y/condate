@@ -3,14 +3,26 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.main {
-  height: 91vh;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-image: url(images/background.png);
+  background-size: 50%;
+}
+
+.opacity-paper {
   margin: 0 13vw;
+  background: rgba(255,255,255,.5);
+  height: 100%;
+}
+
+.main {
+  margin: 0 8vw;
+  min-height: calc(100vh - 30vh);
 }
 
 .upper-content {
   height: 40vh;
-  background-color: white;
 }
 
 .today {
@@ -55,6 +67,7 @@ a{
   text-align: center;
   border-top: 1px solid #e3d5c3;
   border-bottom: 1px solid #e3d5c3;
+  background-color: #fff;
 }
 
 .to-index {
