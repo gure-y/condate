@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const createImageHTML = (blob) => {
     const imageElement = document.createElement('div');
-
     const blobImage = document.createElement('img');
+
     blobImage.setAttribute('src', blob);
     blobImage.setAttribute('class','preview-image')
 
@@ -23,5 +23,9 @@ document.addEventListener('DOMContentLoaded', function(){
     const blob = window.URL.createObjectURL(file);
 
     createImageHTML(blob);
+    const hiddenImage = document.getElementById('form-image');
+    const hiddenText = document.getElementById('form-image-text');
+    hiddenImage.setAttribute("type","hidden");
+    hiddenText.setAttribute("class","hidden");
   });
 });

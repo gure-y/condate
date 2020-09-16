@@ -26,7 +26,10 @@
             <div class="menu-post-image">
               <div id="image-list">
               </div>
-                <%= f.file_field :image, class: "menu--img" %>
+              <label class="form-image" id="form-image">
+                <p id="form-image-text">クリックして<br>画像を選択</p>
+                <%= f.file_field :image, class: "menu--img hidden" %>
+              </label>
             </div>
           </div>
           <div class="menu-post-titles">
