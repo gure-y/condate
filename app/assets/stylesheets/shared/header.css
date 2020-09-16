@@ -8,6 +8,7 @@
   padding: 0 10vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid wheat;
 }
 
@@ -15,28 +16,12 @@
   height: 8vh;
 }
 
-.user-dropdown {
-  display: flex;
-}
-
 li {
   list-style: none;
 }
 
-.mypage {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #635f5a;
-}
-.new-post {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #635f5a;
-}
-
-.logout {
-  text-decoration: none;
-  color: #635f5a;
+.login-and-signup {
+  display: flex;
 }
 
 .login {
@@ -47,5 +32,47 @@ li {
 
 .sign-up {
   text-decoration: none;
+  color: #635f5a;
+}
+
+.hidden {
+  display: none;
+}
+
+.for-user {
+  position: relative;
+  width: 10vw;
+  display : inline-block;
+  border-radius : 30px;
+  font-size : 2vh;
+  text-align : center;
+  cursor : pointer;
+  padding : 15px;
+  background : #dfbb76;
+  color : #ffffff;
+  line-height : 1em;
+  border: none;
+}
+.for-user:hover {
+  opacity       : 0.6;
+}
+
+.user-dropdown {
+  width: 16vw;
+  position: absolute;
+  top: 10vh;
+  background-color: #ffffff;
+  }
+
+.pulldoun-list {
+  width: 16vw;
+  font-size: 1.8vh;
+  text-decoration: none;
+  padding: 1vh 0 1vh 1vw;
+  border: 1px solid wheat; 
+  color: #635f5a;
+}
+
+.pulldown-list-link {
   color: #635f5a;
 }
