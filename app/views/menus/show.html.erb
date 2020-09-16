@@ -1,52 +1,57 @@
 <%= render "shared/header" %>
 
-<main class="main">
-  <div class="menu-detail">
-    <div class="left-menu">
-      <div class="left-menu-detail">
-        <div class="menu-detail-img">
-          <% if @menu.image.attached? %>
-          <%= image_tag @menu.image.variant(combine_options:{gravity: :center, resize:"640x640^", crop:"640x640+0+0"}).processed, class: "menu--img" %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    <div class="right-menu">
-      <div class="right-menu-detail">
-        <div class="menu-title-user">
-          <div class="menu-detail-title">
-            <%= @menu.title %>
-          </div>
-          <%= link_to "by #{@menu.user.name}", user_path(@menu.user), class: "cooked-name"%>
-          <div class="right-bookmark-icon">
-            <div id="bookmark_<%= @menu.id %>", class="bookmark-icon">
-              <%= render partial: "bookmarks/bookmark", locals: { menu: @menu } %>
+<div class="wrapper">
+  <div class="opacity-paper">
+    <main class="main">
+      <div class="menu-detail">
+        <div class="left-menu">
+          <div class="left-menu-detail">
+            <div class="menu-detail-img">
+              <% if @menu.image.attached? %>
+              <%= image_tag @menu.image.variant(combine_options:{gravity: :center, resize:"640x640^", crop:"640x640+0+0"}).processed, class: "menu--img" %>
+              <% end %>
             </div>
           </div>
         </div>
-        <% if @menu.url.present? %>
-          <div class="menu-detail-url">
-            レシピURL
+        <div class="right-menu">
+          <div class="right-menu-detail">
+            <div class="menu-title-user">
+              <div class="menu-detail-title">
+                <%= @menu.title %>
+              </div>
+              <%= link_to "by #{@menu.user.name}", user_path(@menu.user), class: "cooked-name"%>
+              <div class="right-bookmark-icon">
+                <div id="bookmark_<%= @menu.id %>", class="bookmark-icon">
+                  <%= render partial: "bookmarks/bookmark", locals: { menu: @menu } %>
+                </div>
+              </div>
+            </div>
+            <% if @menu.url.present? %>
+              <div class="menu-detail-url">
+                レシピURL
+              </div>
+              <p>
+                <%= raw Rinku.auto_link(@menu.url, :all, 'target="_blank"').html_safe %>
+              </p>
+            <% end %>
+            <% if @menu.recipe.present? %>
+              <div class="menu-detail-recipe">
+                レシピ
+              </div>
+              <p>
+                <%= @menu.recipe %>
+              </p>
+            <% end %>
           </div>
-          <p>
-            <%= raw Rinku.auto_link(@menu.url, :all, 'target="_blank"').html_safe %>
-          </p>
-        <% end %>
-        <% if @menu.recipe.present? %>
-          <div class="menu-detail-recipe">
-            レシピ
-          </div>
-          <p>
-            <%= @menu.recipe %>
-          </p>
+        </div>
+      </div>
+      <div class="btns">
+        <% if user_signed_in? && current_user.id == @menu.user_id %>
+          <%= button_to "編集する", edit_menu_path(@menu), method: :get, class: "edit-btn" %>
+          <%= button_to "削除する", menu_path(@menu), method: :delete, data: { confirm: '削除しますか？' }, class: "delete-btn" %>
         <% end %>
       </div>
-    </div>
+    </main>
   </div>
-  <div class="btns">
-    <% if user_signed_in? && current_user.id == @menu.user_id %>
-      <%= button_to "編集する", edit_menu_path(@menu), method: :get, class: "edit-btn" %>
-      <%= button_to "削除する", menu_path(@menu), method: :delete, data: { confirm: '削除しますか？' }, class: "delete-btn" %>
-    <% end %>
-  </div>
-</main>
+  <%= render "shared/footer" %>
+</div>

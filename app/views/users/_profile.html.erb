@@ -3,7 +3,7 @@
     <%= image_tag "profile-icon.png", class: "profile-img" %>
   </div>
   <div class="middle-profile">
-    <%= current_user.name %>
+    <p><%= current_user.name %></p>
     <%= button_to "ごはんを記録する", new_menu_path, method: :get, class: "post" %>
   </div>
   <div class="right-profile">

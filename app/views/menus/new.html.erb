@@ -2,51 +2,57 @@
   <div class="top-page-image">
     <%= link_to image_tag("condate-bear.png", class: "condate-icon"), root_path %>
   </div>
-  <div class="for-user">
-    <ul class="user-dropdown" id="pulldown">
+    <ul class="login-and-signup">
       <li>
-        <%= link_to "マイページ", user_path(current_user), class: "mypage" %>
+        <%= link_to "マイページ", user_path(current_user), class: "login" %>
       </li>
       <li>
-        <%= link_to "ログアウト", destroy_user_session_path , class: "logout" %>
+        <%= link_to "ログアウト", destroy_user_session_path , class: "sign-up" %>
       </li>
     </ul>
-  </div>
 </header>
 
-<main class="main">
-  <%= form_with model: @menu, local: true do |f| %>
-    <div class="menu-post">
-      <div class="post-title">
-        <p>記録する</p>
-      </div>
-      <%= render 'shared/error_messages', model: f.object %>
-      <div class="menu-post-images">
-        <p>ごはんの写真</p>
-        <div class="menu-post-image">
-          <div id="image-list">
+<div class="wrapper">
+  <div class="opacity-paper">
+    <main class="main">
+      <%= form_with model: @menu, local: true do |f| %>
+        <div class="menu-post">
+          <div class="post-title">
+            <p>記録する</p>
           </div>
-          <%= f.file_field :image, class: "menu--img" %>
+          <%= render 'shared/error_messages', model: f.object %>
+          <div class="menu-post-images">
+            <p>ごはんの写真</p>
+            <div class="menu-post-image">
+              <div id="image-list">
+              </div>
+              <label class="form-image" id="form-image">
+                <p id="form-image-text">クリックして<br>画像を選択</p>
+                <%= f.file_field :image, class: "menu--img hidden" %>
+              </label>
+            </div>
+          </div>
+          <div class="menu-post-titles">
+            <p class="menu-post-title">料理の名前</p>
+            <%= f.text_area :title, placeholder: "例）オムライス", class: "menu--title" %>
+          <div>
+          <div class="menu-post-urls">
+            <p class="menu-post-url">レシピURL</p>
+              <%= f.text_area :url, placeholder: "参考にしたサイトがあったら教えてください", class: "menu--url" %>
+          </div>
+          <div class="menu-post-recipes">
+            <p class="menu-post-recipe">レシピ</p>
+            <%= f.text_area :recipe, placeholder: "もしレシピがあったら教えてください", class: "menu--recipe", raw: 10 %> 
+          </div>
+          <div class="post-submit">
+            <%= f.submit "記録する", class: "btn"%>
+          </div>
         </div>
-      </div>
-      <div class="menu-post-titles">
-        <p class="menu-post-title">料理の名前</p>
-        <%= f.text_area :title, placeholder: "例）オムライス", class: "menu--title" %>
-      <div>
-      <div class="menu-post-urls">
-        <p class="menu-post-url">レシピURL</p>
-          <%= f.text_area :url, placeholder: "参考にしたサイトがあったら教えてください", class: "menu--url" %>
-      </div>
-      <div class="menu-post-recipes">
-        <p class="menu-post-recipe">レシピ</p>
-        <%= f.text_area :recipe, placeholder: "もしレシピがあったら教えてください", class: "menu--recipe", raw: 10 %> 
-      </div>
+      <% end %>
       <div class="post-submit">
-        <%= f.submit "記録する", class: "btn"%>
+        <%= button_to "キャンセル", user_path(current_user), method: :get, class: "back" %>
       </div>
-    </div>
-  <% end %>
-  <div class="post-submit">
-    <%= button_to "キャンセル", user_path(current_user), method: :get, class: "back" %>
+    </main>
   </div>
-</main>
+  <%= render "shared/footer" %>
+</div>
