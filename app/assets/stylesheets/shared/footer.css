@@ -14,14 +14,32 @@
 }
 
 .footer-bear-img {
-  height: 8vh;
+  width: 3vw;
 }
 
 .footer-img {
-  height: 10vh;
+  width: 30vw;
 }
 
 .copy-right {
   color: #fff;
   margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .footer-bear-img {
+    width: 10vw;
+  }
+  .footer-img {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 599px) {
+  .footer-bear-img {
+    width: 10vw;
+  }
+  .footer-img {
+    width: 50vw;
+  }
 }

@@ -12,12 +12,13 @@
   border-bottom: 2px solid #e3d5c3;
   margin-bottom: 1vh;
   font-weight: bold;
-  font-size: 2vh;
+  font-size: 2vw;
 }
 
 .fridge-lists {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .fridge-list-title {
@@ -81,4 +82,43 @@
 }
 .empty-btn:hover {
   background-color: whitesmoke;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .fridge-list-title, .ing {
+    font-size: 2vw;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 599px) {
+  .fridge-list-title, .ing {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .fridge-title p {
+    font-size: 14px;
+  }
+
+  .fridge-list {
+    width: 20vw;
+    margin: 5px;  
+  }
+
+  .ok-btn {
+    width: 20vw;
+    height: 4vh;
+    border-radius : 30px;
+    font-size : 12px;
+    margin: 3vh 3vw 3vh 0;
+    line-height: 0.5vh;
+  }
+  .empty-btn {
+    width: 30vw;
+    height: 4vh;
+    border-radius : 30px;
+    font-size : 12px;
+    margin: 3vh 3vw 3vh 0;
+    line-height: 0.5vh;
+  }
 }

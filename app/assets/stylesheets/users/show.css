@@ -36,6 +36,7 @@
 .change-lists {
   display: flex;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .another-list {
@@ -59,4 +60,22 @@
 .gohan-list-now, .bookmark-list-now {
   color: #dfbb76;
   font-weight: bold;
+}
+
+@media (max-width: 599px) {
+  .profile-img {
+    height: 10vh;
+  }
+  .another-list, .now-list  {
+    width: 50vw;
+    padding: 1vh 7vw;
+    font-size: 12px;
+  }
+  .post {
+    width: 40vw;
+    font-size : 12px;
+    margin: 0;
+    padding : 1vh;
+    line-height : 1em;
+  }
 }
