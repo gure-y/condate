@@ -30,7 +30,7 @@
   justify-content: center;
   padding: 10vh 0 5vh 0;
   color: #635f5a;
-  font-weight: bold;
+  font-size: 1vw;
 }
 
 .yes-or-yet {
@@ -50,10 +50,9 @@ a{
   border: 2px solid #dfbb76;
   border-radius: 30px;
   color: #dfbb76;
-  font-weight: bold;
   color: #dfbb76;
   text-align: center;
-  font-size: 2vh;
+  font-size: 1vw;
   background-color: #ffffff;
   margin: 0 3vw;
 }
@@ -118,4 +117,40 @@ a{
 }
 .bookmark-icon {
   height: 3vh;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .main {
+    margin: 0 8vw;
+    min-height: calc(100vh - 30vh);
+  }
+
+  .opacity-paper {
+    margin: 0 6vw;
+  }
+  
+  .today, .to-index, .select-icon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 599px) {
+  .main {
+    margin: 0;
+    min-height: calc(100vh - 30vh);
+  }
+
+  .opacity-paper {
+    margin: 0 2vw;
+  }
+
+  .today, .to-index,.select-icon {
+    font-size: 12px;
+  }
+
+  .select-icon {
+    width: 25vw;
+    height: 4vh;
+    line-height: 3vh;
+  }
 }

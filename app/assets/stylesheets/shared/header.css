@@ -44,7 +44,7 @@ li {
   width: 10vw;
   display : inline-block;
   border-radius : 30px;
-  font-size : 2vh;
+  font-size : 1vw;
   text-align : center;
   cursor : pointer;
   padding : 15px;
@@ -61,18 +61,40 @@ li {
   width: 16vw;
   position: absolute;
   top: 10vh;
-  background-color: #ffffff;
   }
 
 .pulldoun-list {
-  width: 16vw;
-  font-size: 1.8vh;
+  width: 10vw;
   text-decoration: none;
   padding: 1vh 0 1vh 1vw;
-  border: 1px solid wheat; 
-  color: #635f5a;
+  border: 1px solid wheat;
+  background-color: #ffffff;
+ 
 }
 
 .pulldown-list-link {
+  font-size: 1vw;
   color: #635f5a;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .condate-icon {
+    height: 6vh;
+  }
+  .for-user {
+    font-size : 2vw;
+  }
+}
+
+@media (max-width: 599px) {
+  .condate-icon {
+    height: 5vh;
+  }
+  .for-user {
+    width: 80px;
+  }
+  .pulldoun-list {
+    width: 80px;
+    padding: 0.5vh 1vw;
+  }
 }

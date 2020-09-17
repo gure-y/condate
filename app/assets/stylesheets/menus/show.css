@@ -1,19 +1,51 @@
 .menu-detail {
   margin-top: 5vh;
   display: flex;
-  justify-content: center;
 }
 
 .left-menu {
-  width: 40vw;
-  display: flex;
-  justify-content: flex-end;
   margin-right: 2vw;
 }
 
 .menu--img {
   height: 30vh;
   border-radius: 6px;
+}
+
+.right-menu-detail {
+  color: #635f5a;
+}
+
+.menu-title-user {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid #e3d5c3;
+}
+
+.menu-detail-title {
+  font-size: 3vh;
+  font-weight: bold;
+  padding-right: 1vw;
+}
+.cooked-name {
+  font-size: 2vh;
+  color: #827b74;
+  padding-bottom: 0.5vh;
+  white-space: nowrap;
+}
+.right-bookmark-icon {
+  margin: 0 0 1vh 2vw;
+}
+
+.menu-detail-url {
+  margin-top: 2vh;
+  font-size: 2vh;
+  border-bottom: 1px solid #e3d5c3;
+}
+.menu-detail-recipe {
+  margin-top: 2vh;
+  font-size: 2vh;
+  border-bottom: 1px solid #e3d5c3;
 }
 
 .btns {
@@ -60,45 +92,95 @@
   background-color: #fff9ef;
 }
 
+@media (min-width: 600px) and (max-width: 1024px) {
+  .menu--img {
+    height: 20vh;
+    border-radius: 6px;
+  }
 
-.right-menu {
-  width: 40vw;
-  display: flex;
-  justify-content: flex-start;
+  .menu-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-menu {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-title-user {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #e3d5c3;
+  }
+  
+  .menu-detail-title {
+    font-size: 24px;
+    padding-right: 1vw;
+    white-space: nowrap;
+  }
+  .cooked-name {
+    font-size: 18px;
+    color: #827b74;
+    padding-bottom: 0;
+  }
+  .right-bookmark-icon {
+    margin: 0;
+  }
+
 }
 
-.right-menu-detail {
-  width: 100%;
-  color: #635f5a;
-}
+@media (max-width: 599px) {
+  .menu--img {
+    height: 20vh;
+    border-radius: 6px;
+  }
 
-.menu-title-user {
-  display: flex;
-  align-items: flex-end;
-  border-bottom: 1px solid #e3d5c3;
-}
+  .menu-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-menu {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+  }
 
-.menu-detail-title {
-  font-size: 3vh;
-  font-weight: bold;
-  padding-right: 1vw;
-}
-.cooked-name {
-  font-size: 2vh;
-  color: #827b74;
-  padding-bottom: 0.5vh;
-}
-.right-bookmark-icon {
-  margin: 0 0 1vh 2vw;
-}
+  .menu-title-user {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #e3d5c3;
+  }
+  
+  .menu-detail-title {
+    font-size: 20px;
+    padding-right: 1vw;
+    white-space: nowrap;
+  }
+  .cooked-name {
+    font-size: 14px;
+    color: #827b74;
+    padding-bottom: 0;
+  }
+  .right-bookmark-icon {
+    margin: 0;
+  }
 
-.menu-detail-url {
-  margin-top: 2vh;
-  font-size: 2vh;
-  border-bottom: 1px solid #e3d5c3;
-}
-.menu-detail-recipe {
-  margin-top: 2vh;
-  font-size: 2vh;
-  border-bottom: 1px solid #e3d5c3;
+  .edit-btn, .delete-btn {
+    width: 30vw;
+    height: 5vh;
+    border-radius : 4px;
+    font-size : 16px;
+    padding : 15px;
+    line-height : 1vh;
+  }
+  .edit-btn {
+    margin-right: 4vw;
+  }
 }
