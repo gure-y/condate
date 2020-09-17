@@ -7,7 +7,8 @@
           今日のごはん決めた？
         </div>
         <div class="yes-or-yet">
-            <%= button_to "決めた！", praise_menus_path, method: :get, class: "select-icon" %>
+            <div class="select-icon", id="open">決めた！</div>
+            <%#= button_to "決めた！", praise_menus_path, method: :get, class: "select-icon",id: "to-praise" %>
             <%= button_to "まだ", refrigerators_path, method: :get, class: "select-icon" %>
         </div>
       </div>
@@ -33,7 +34,6 @@
                     <%= render partial: "bookmarks/bookmark", locals: { menu: menu } %>
                   </div>
                 </div>
-
               <% end %>
             </div>
           <% end %>
@@ -49,3 +49,24 @@
   <%= render "shared/footer" %>
 </div>
 
+<div class="hidden", id="background"></div>
+<div class="hidden" id="praise">
+  <div class="praise">
+    <div class="close-btn" id="close-btn">×</div>
+    <div class="upper-praise">
+      <p>エライ！！！！！！！！</p>
+    </div>
+    <%= image_tag "praise.png", class: "praise-img" %>
+    <% if user_signed_in? %>
+      <p class="bottom-praise">
+        上手にできたら記録しておきましょう！
+      </p>
+      <%= button_to "記録する", new_menu_path, method: :get, class: "praise-btn" %>
+    <% else %>
+      <p class="bottom-praise">
+        ログインして記録しておきましょう！
+      </p>
+      <%= button_to "ログインする", new_user_session_path, class: "praise-btn" %>
+    <% end %>
+  </div>
+</div>

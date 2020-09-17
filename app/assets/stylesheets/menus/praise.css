@@ -13,11 +13,11 @@
 }
 
 .praise-img {
-  height: 40vh;
+  height: 30vh;
 }
 
 .praise-btn {
-  width: 350px;
+  width: 180px;
   display : inline-block;
   border-radius : 4px;
   font-size : 12pt;
@@ -40,4 +40,85 @@ p {
 
 .edit-profile {
   height: 6vh;
+}
+
+#background {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  left: 370px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #635f5a;
+}
+
+#open {
+  cursor: pointer;
+}
+
+#praise {
+  background-color: #fff;
+  width: 400px;
+  position: relative;
+  position: absolute;
+  top:40px;
+  right: 0px;
+  left:0px;
+  margin:0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 2;
+  transition: 0.8s
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .praise-img {
+    height: 20vh;
+  }
+
+  .bottom-praise {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    left: 90%;
+    font-size: 30px;
+  }
+
+  #praise {
+  width: 50%;
+  }
+}
+
+@media (max-width: 599px) {
+  .praise-img {
+    height: 20vh;
+  }
+
+  .bottom-praise {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    left: 90%;
+    font-size: 20px;
+  }
+
+  #praise {
+  width: 70%;
+  }
 }
