@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
 
-  before_action :authenticate_user!, except: [:top, :praise]
+  before_action :authenticate_user!, except: [:top]
   before_action :cooking_user, only: [:edit, :update, :destroy]
 
     
@@ -48,9 +48,6 @@ class MenusController < ApplicationController
     else
       render :show
     end
-  end
-
-  def praise
   end
 
   private

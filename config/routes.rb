@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     resource :bookmarks, only: [:create, :destroy]
     collection do
       get 'top'
-      get 'praise'
     end
   end
   resources :users do
