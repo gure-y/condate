@@ -49,6 +49,6 @@ class Administrator::RefrigeratorsController < ApplicationController
   end
 
   def refrigerator_params
-    params.require(:refrigerator).permit(:image, :cooking, :main, :meat, :fish, :egg, :tofu, :begetable)
+    params.require(:refrigerator).permit(:image, :cooking, :main, :meat, :fish, :egg, :tofu, :begetable, :url)
   end
 end
