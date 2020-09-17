@@ -3,4 +3,5 @@ class Refrigerator < ApplicationRecord
 
   validates :cooking, presence: true
   validates :image, presence: true
+  validates :url, presence: true
 end

@@ -9,12 +9,15 @@
             <p class="in-fridge-title">今日のごはんは・・・</p>
             <%= image_tag result.image %> 
             <p class="in-fridge-title"><%= result.cooking %>！</p>
+            <div class="fridge-btns">
+            <%= link_to "レシピを探す？", result.url,class: "fridge-btn" %>
+            <%= button_to "トップページへ", root_path, method: :get, class: "fridge-top-btn" %>
           <% end %>
         <% else %>
           <p class="in-fridge-title">今日は外食にしましょう！！！！</p>
           <%= image_tag "gaisyoku.png" %>
+          <%= button_to "トップページへもどる", root_path, method: :get, class: "btn" %>
         <% end %>
-        <%= button_to "トップページへもどる", root_path, method: :get, class: "btn" %>
       </div>
     </main>
   </div>
