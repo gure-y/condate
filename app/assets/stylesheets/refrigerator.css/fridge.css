@@ -9,3 +9,45 @@
   margin: 10vh 0 3vh;
   font-size: 20px;
 }
+
+.fridge-btns {
+  margin-bottom: 2vh;
+  display: flex;
+  justify-content: center;
+}
+
+.fridge-btn {
+  width: 20vw;
+  height: 5vh;
+  display : inline-block;
+  border-radius : 30px;
+  font-size : 1.5vw;
+  text-align : center;
+  cursor : pointer;
+  background : #dfbb76;
+  color : #ffffff;
+  line-height : 5vh;
+  border: 2px solid #dfbb76;
+  margin-right: 4vw;
+}
+.fridge-btn:hover {
+  opacity       : 0.6;
+}
+
+.fridge-top-btn {
+  width: 20vw;
+  height: 5vh;
+  display : inline-block;
+  border-radius : 30px;
+  font-size : 1.5vw;
+  text-align : center;
+  cursor : pointer;
+  background : #ffffff;
+  color : #dfbb76;
+  line-height : 5vh;
+  border: 2px solid #dfbb76;
+  margin-left: 4vw;
+}
+.fridge-top-btn:hover {
+  background-color: #fff9ef;
+}
