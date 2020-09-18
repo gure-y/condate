@@ -1,5 +1,5 @@
 ## 🍙アプリケーション名
-condate
+condate bear
 
 ## 🍙アプリケーション概要
 - 冷蔵庫の中身を選ぶとその材料を使ってできる献立を考えてくれます
@@ -19,16 +19,18 @@ http://54.248.60.186/
 
 
 ## 🍙目指した課題解決
-![condate](https://user-images.githubusercontent.com/68979287/93204029-5a445380-f790-11ea-893b-231520c56f46.jpg)
-
+<img src="https://user-images.githubusercontent.com/68979287/93204029-5a445380-f790-11ea-893b-231520c56f46.jpg" width="400px" >
+<br>
 仕事終わりに、「ごはん作らなきゃいけないけど献立考えるのめんどくさいなあ…誰か代わりに考えてくれないかなあ…」と日々忙殺されている現代人を献立ベアがお助けします！
 
 
 ## 🍙特徴的な機能
-冷蔵庫の中身を選ぶとその材料を使ってできる献立を考えてくれます
-[![Image from Gyazo](https://i.gyazo.com/5989ee0b2f16d49e95e6df603ab53ab6.gif)](https://gyazo.com/5989ee0b2f16d49e95e6df603ab53ab6)
-
-
+冷蔵庫の中身を選ぶとその材料を使ってできる献立を考えてくれます。
+[![Image from Gyazo](https://i.gyazo.com/311e0848102dc67b88f72da89e6392c8.gif)](https://gyazo.com/311e0848102dc67b88f72da89e6392c8)
+<br>
+<br>
+献立を決めると献立ベアが褒めてくれます。
+[![Image from Gyazo](https://i.gyazo.com/c7a124eb4f3bf94af31b4583ecf54f96.gif)](https://gyazo.com/c7a124eb4f3bf94af31b4583ecf54f96)
 
 ## 🍙要件定義
 優先順位 | 機能 | 目的
