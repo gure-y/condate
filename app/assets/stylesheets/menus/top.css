@@ -3,13 +3,6 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  background-image: url(images/background.png);
-  background-size: 50%;
-}
-
 .opacity-paper {
   margin: 0 13vw;
   background: rgba(255,255,255,.5);
