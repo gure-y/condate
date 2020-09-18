@@ -9,8 +9,8 @@ condate bear
 - 仕事帰りに献立を考えられるようにレスポンシブデザインに対応しています
 
 ## 🍙アプリケーションURL
-http://54.248.60.186/
-
+https://condate-bear.ml
+<br>
 
 ## 🍙テスト用アカウント
 
@@ -25,8 +25,8 @@ http://54.248.60.186/
 
 
 ## 🍙特徴的な機能
-冷蔵庫の中身を選ぶとその材料を使ってできる献立を考えてくれます。
-[![Image from Gyazo](https://i.gyazo.com/311e0848102dc67b88f72da89e6392c8.gif)](https://gyazo.com/311e0848102dc67b88f72da89e6392c8)
+冷蔵庫の中身を選ぶとその中の材料を使ってできる献立を考えてくれます。
+[![Image from Gyazo](https://i.gyazo.com/5d4bd86b8ea66af3c074f393fc61d2e2.gif)](https://gyazo.com/5d4bd86b8ea66af3c074f393fc61d2e2)
 <br>
 <br>
 献立を決めると献立ベアが褒めてくれます。
