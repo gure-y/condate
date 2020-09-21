@@ -92,6 +92,59 @@
   background-color: #fff9ef;
 }
 
+/* 削除確認モーダルここから */
+
+.delete-confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upper-delete-confirm {
+  text-align: center;
+}
+
+.bottom-delete-confirm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ok-delete-btn {
+  width: 6vw;
+  height: 5vh;
+  border-radius : 4px;
+  font-size : 1.5vh;
+  text-align : center;
+  cursor : pointer;
+  background : #dfbb76;
+  color : #ffffff;
+  line-height : 5vh;
+  border: 1px solid #dfbb76;
+  margin-right: 4vw;
+}
+.ok-delete-btn:hover {
+  opacity       : 0.6;
+}
+.no-delete-btn {
+  width: 6vw;
+  height: 5vh;
+  border-radius : 4px;
+  font-size : 1.5vh;
+  text-align : center;
+  cursor : pointer;
+  background : #ffffff;
+  color : #dfbb76;
+  line-height : 5vh;
+  border: 1px solid #dfbb76;
+}
+.no-delete-btn:hover {
+  background-color: #fff9ef;
+}
+
+
+/* 削除確認モーダルここまで */
+
 @media (min-width: 600px) and (max-width: 1024px) {
   .menu--img {
     height: 20vh;
@@ -129,6 +182,10 @@
   }
   .right-bookmark-icon {
     margin: 0;
+  }
+
+  .ok-delete-btn, .no-delete-btn {
+    width: 10vw;
   }
 
 }
@@ -182,5 +239,9 @@
   }
   .edit-btn {
     margin-right: 4vw;
+  }
+
+  .ok-delete-btn, .no-delete-btn {
+    width: 20vw;
   }
 }

@@ -48,10 +48,29 @@
       <div class="btns">
         <% if user_signed_in? && current_user.id == @menu.user_id %>
           <%= button_to "編集する", edit_menu_path(@menu), method: :get, class: "edit-btn" %>
-          <%= button_to "削除する", menu_path(@menu), method: :delete, data: { confirm: '削除しますか？' }, class: "delete-btn" %>
+          <div class="delete-btn" id="open" >
+          削除する
+          </div>
         <% end %>
       </div>
     </main>
   </div>
   <%= render "shared/footer" %>
+</div>
+
+<%# ここから削除確認モーダル部分 %>
+
+<div class="hidden", id="background"></div>
+<div class="hidden" id="praise">
+  <div class="delete-confirm">
+    <div class="upper-delete-confirm">
+      <p>この記録を削除しますか？</p>
+    </div>
+    <div class="bottom-delete-confirm">
+      <%= button_to "はい", menu_path(@menu), method: :delete, class: "ok-delete-btn" %>
+      <div class="no-delete-btn" id="close-btn" >
+      いいえ
+      </div>
+    </div>
+  </div>
 </div>
