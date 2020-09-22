@@ -34,9 +34,9 @@
                 <%= raw Rinku.auto_link(@menu.url, :all, 'target="_blank"').html_safe %>
               </p>
             <% end %>
-            <% if @menu.recipe.present? %>
+            <% if @menu.recipe.present? && @menu.user_id == current_user.id %>
               <div class="menu-detail-recipe">
-                レシピ
+                メモ
               </div>
               <p>
                 <%= @menu.recipe %>
