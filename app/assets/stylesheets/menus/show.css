@@ -1,6 +1,9 @@
 .menu-detail {
   margin-top: 5vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .left-menu {
@@ -150,13 +153,6 @@
     height: 20vh;
     border-radius: 6px;
   }
-
-  .menu-detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   
   .right-menu {
     width: 90vw;
@@ -194,13 +190,6 @@
   .menu--img {
     height: 20vh;
     border-radius: 6px;
-  }
-
-  .menu-detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   
   .right-menu {
