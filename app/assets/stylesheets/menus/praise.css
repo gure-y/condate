@@ -28,6 +28,7 @@
   color : #ffffff;
   line-height : 1em;
   border: none;
+  -webkit-appearance: none;
 }
 .praise-btn:hover {
   opacity : 0.6;

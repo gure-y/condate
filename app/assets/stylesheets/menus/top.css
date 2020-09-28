@@ -3,10 +3,6 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-button, textarea {
-  -webkit-appearance: none;
-}
-
 .opacity-paper {
   margin: 0 13vw;
   background: rgba(255,255,255,.5);
@@ -52,6 +48,7 @@ a{
   font-size: 1vw;
   background-color: #ffffff;
   margin: 0 3vw;
+  -webkit-appearance: none;
 }
 .select-icon:hover {
   background-color: #dfbb76;
