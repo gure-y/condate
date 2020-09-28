@@ -11,4 +11,10 @@ class User < ApplicationRecord
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
   validates :name, presence: true
   validates :password, format: { with: VALID_PASSWORD_REGEX }, on: :create
+
+  def self.guest
+    find_by(email: 'test@condate.com') do |user|
+      user.password = ENV['PASSWORD']
+    end
+  end
 end
