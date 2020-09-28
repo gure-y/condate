@@ -69,6 +69,7 @@
   color : #ffffff;
   line-height : 1em;
   border: none;
+  -webkit-appearance: none;
 }
 .btn:hover {
   opacity       : 0.6;
@@ -95,5 +96,6 @@
   color : #dfbb76;
   line-height : 1em;
   border: 2px solid #dfbb76;
+  -webkit-appearance: none;
 }
 

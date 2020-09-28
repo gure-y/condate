@@ -71,6 +71,7 @@
   line-height : 1em;
   border: 2px solid #dfbb76;
   margin-right: 4vw;
+  -webkit-appearance: none;
 }
 .edit-btn:hover {
   opacity       : 0.6;
@@ -90,6 +91,7 @@
   line-height : 1em;
   border: 2px solid #dfbb76;
   margin-left: 4vw;
+  -webkit-appearance: none;
 }
 .delete-btn:hover {
   background-color: #fff9ef;
@@ -125,6 +127,7 @@
   line-height : 5vh;
   border: 1px solid #dfbb76;
   margin-right: 4vw;
+  -webkit-appearance: none;
 }
 .ok-delete-btn:hover {
   opacity       : 0.6;

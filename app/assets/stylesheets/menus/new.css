@@ -96,6 +96,7 @@
   color : #dfbb76;
   line-height : 1em;
   border: 2px solid #dfbb76;
+  -webkit-appearance: none;
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
