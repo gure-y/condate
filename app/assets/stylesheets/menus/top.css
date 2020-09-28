@@ -3,7 +3,7 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-input, button, textarea {
+button, textarea {
   -webkit-appearance: none;
 }
 
