@@ -3,34 +3,34 @@
     <%= link_to image_tag("condate-bear.png", class: "condate-icon"), root_path %>
   </div>
 
-    <% if user_signed_in? %>
-      <div class="user-selector">
-        <div class="for-user" id="current-user-name">
-          <%= current_user.name %>
-        </div>
-        <div class="user-dropdown hidden" id="pulldown">
-          <div class="pulldoun-list">
-            <%= link_to "マイページ", user_path(current_user),class: "pulldown-list-link" %>
-          </div>
-          <div class="pulldoun-list">
-            <%= link_to "記録する", new_menu_path,class: "pulldown-list-link" %>
-          </div>
-          <div class="pulldoun-list">
-            <%= link_to "ログアウト", destroy_user_session_path,class: "pulldown-list-link" %>
-          </div>
-        <div>
+  <% if user_signed_in? %>
+    <div class="user-selector">
+      <div class="for-user" id="current-user-name">
+        <%= current_user.name %>
       </div>
-      <% else %>
-      <ul class="login-and-signup">
-        <li>
-          <%= link_to "ゲストログイン", users_guest_sign_in_path,method: :post, class: "login" %>
-        </li>
-        <li>
-          <%= link_to "ログイン", new_user_session_path, class: "login" %>
-        </li>
-        <li>
-          <%= link_to "新規登録", new_user_registration_path , class: "sign-up" %>
-        </li>
-      </ul>
-      <% end %>
+      <div class="user-dropdown hidden" id="pulldown">
+        <div class="pulldoun-list">
+          <%= link_to "マイページ", user_path(current_user),class: "pulldown-list-link" %>
+        </div>
+        <div class="pulldoun-list">
+          <%= link_to "記録する", new_menu_path,class: "pulldown-list-link" %>
+        </div>
+        <div class="pulldoun-list">
+          <%= link_to "ログアウト", destroy_user_session_path,class: "pulldown-list-link" %>
+        </div>
+      <div>
+    </div>
+  <% else %>
+    <ul class="login-and-signup">
+      <li>
+        <%= link_to "ゲストログイン", users_guest_sign_in_path,method: :post, class: "login" %>
+      </li>
+      <li>
+        <%= link_to "ログイン", new_user_session_path, class: "login" %>
+      </li>
+      <li>
+        <%= link_to "新規登録", new_user_registration_path , class: "sign-up" %>
+      </li>
+    </ul>
+  <% end %>
 </header>
