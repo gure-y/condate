@@ -3,6 +3,10 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+input, button, textarea {
+  -webkit-appearance: none;
+}
+
 .opacity-paper {
   margin: 0 13vw;
   background: rgba(255,255,255,.5);
