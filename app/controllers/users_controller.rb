@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  before_action :guest_user, only:[:edit, :update]
+
 
   def show
     @user = User.find(params[:id])
@@ -28,5 +30,9 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email)
   end
 
-
+  def guest_user
+    if current_user.email = "test@condate.com"
+      redirect_to user_path(current_user)
+    end
+  end
 end
