@@ -97,7 +97,9 @@ li {
   .pulldoun-list {
     width: 80px;
     padding: 0.5vh 1vw;
-    font-size: 14px;
+  }
+  .pulldown-list-link {
+    font-size: 12px;
   }
   .login-and-signup {
     white-space: nowrap;
