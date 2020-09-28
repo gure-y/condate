@@ -11,12 +11,7 @@ condate bear
 ## 🍙アプリケーションURL
 https://condate-bear.ml
 <br>
-
-## 🍙テスト用アカウント
-
-- メールアドレス test@condate.com
-- パスワード condate23
-
+※採用担当者の方はヘッダー内の「ゲストログイン」よりログインが可能です。
 
 ## 🍙目指した課題解決
 <img src="https://user-images.githubusercontent.com/68979287/93204029-5a445380-f790-11ea-893b-231520c56f46.jpg" width="400px" >
