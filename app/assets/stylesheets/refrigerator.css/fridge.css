@@ -17,11 +17,11 @@
 }
 
 .fridge-btn {
-  width: 20vw;
+  width: 25vw;
   height: 5vh;
   display : inline-block;
   border-radius : 30px;
-  font-size : 1.5vw;
+  font-size : 2vw;
   text-align : center;
   cursor : pointer;
   background : #dfbb76;
@@ -35,11 +35,11 @@
 }
 
 .fridge-top-btn {
-  width: 20vw;
+  width: 25vw;
   height: 5vh;
   display : inline-block;
   border-radius : 30px;
-  font-size : 1.5vw;
+  font-size : 2vw;
   text-align : center;
   cursor : pointer;
   background : #ffffff;
@@ -50,4 +50,11 @@
 }
 .fridge-top-btn:hover {
   background-color: #fff9ef;
+}
+
+@media (max-width: 599px) {
+  .fridge-btn, .fridge-top-btn {
+    width: 30vw;
+    font-size: 12px;
+  }
 }
